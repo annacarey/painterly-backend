@@ -12,4 +12,9 @@ u2 = User.create(username: "Saman", password: "123")
 c1 = Collection.create(title: "first book", user: u1)
 c2 = Collection.create(title: "second book", user: u2)
 
+p1 = Painting.create(title: "new painting", user: u1, grid: [])
+p2 = Painting.create(title: "rainbow painting", user: u2, grid: [1])
+p3 = Painting.create(title: "colorful painting", user: u2, grid: [[2], [3]])
+
+
 
