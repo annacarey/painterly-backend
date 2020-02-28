@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   resources :paintings
 
+  resources :collections, only: [:index, :create, :show]
+
 end
 
 
