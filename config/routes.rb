@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   resources :collections, only: [:index, :create, :show]
 
+  resources :painting_collections, only: [:create]
+
 end
 
 
