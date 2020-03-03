@@ -1,8 +1,8 @@
 class CollectionsController < ApplicationController
 
     def index
-        collections = Collection.all 
-        render json: collections
+        collections = Collection.all
+        render json: collections, include: [:paintings]
     end
 
 
