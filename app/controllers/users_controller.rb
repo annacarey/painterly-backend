@@ -14,6 +14,15 @@ class UsersController < ApplicationController
         end
     end 
 
+    def login 
+        user = User.find_by(username: params[:user][:username])
+        if user && user.authenticate(params[:user][:password])
+            render json: user, except: [:created_at, :updated_at]
+        else
+            render json: {errors: "Your password is incorrect"}
+        end 
+    end 
+
     private 
 
     def user_params
