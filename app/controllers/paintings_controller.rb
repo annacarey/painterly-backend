@@ -8,7 +8,9 @@ end
 def create 
   painting = Painting.new(painting_params)
   if painting.save
-    render json: painting, except: [:created_at, :updated_at]
+    render json: painting, except: [:created_at, :updated_at]  
+  else
+    render json: {errors: painting.errors.full_messages}
   end
 end 
 

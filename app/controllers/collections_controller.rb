@@ -2,18 +2,22 @@ class CollectionsController < ApplicationController
 
     def index
         collections = Collection.all
-        render json: collections, include: [:paintings]
+        render json: collections, except: [:created_at, :updated_at], include: [:paintings]
     end
 
 
     def create 
-        collection = Collection.create(collection_params)
-        render json: collection
+        collection = Collection.new(collection_params)
+        if collection.save
+            render json: collection, except: [:created_at, :updated_at]
+        else
+            render json: {errors: collection.errors.full_messages}
+      end
     end
 
     def show
-        collection = Collection.find_by(params[:id])
-        render json: collection
+        collection = Collection.find(params[:id])
+        render json: collection, except: [:created_at, :updated_at]
     end
 
 private
