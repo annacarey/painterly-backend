@@ -14,12 +14,6 @@ User.destroy_all
 u1 = User.create(username: "Anna", password: "123")
 u2 = User.create(username: "Saman", password: "123")
 
-c1 = Collection.create(title: "first collection", user: u1)
-c2 = Collection.create(title: "second collection", user: u2)
-c3 = Collection.create(title: "downtime collection", user: u1)
-c4 = Collection.create(title: "drafting collection", user: u1)
-c5 = Collection.create(title: "random collection", user: u1)
-
 
 
 
