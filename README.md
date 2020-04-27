@@ -1,4 +1,4 @@
-# Painterly ![logo](./public/favicon-32x32.png "logo")
+# Painterly ![logo](https://github.com/annacarey/painterly-frontend/blob/master/public/favicon-32x32.png?raw=true)
 
 Painterly is an application that aims to unleash your creativity by allowing you to create digital paintings using your computer mouse and save them to your profile and to a public gallery. You can also save paintings to collections.
 
